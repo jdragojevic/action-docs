@@ -13,15 +13,15 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-          
-      - uses: actions-rs/cargo@v1
             
       - name: Install and Build Rust and Dev Docs
         run: |
           git init .
           git remote add origin https://github.com/mozilla/application-services.git
-          git pull origin SYNC-2121-steal-this-book
           cargo install mdbook mdbook-mermaid mdbook-open-on-gh
+          git pull origin SYNC-2121-steal-this-book
+          git submodule init
+          git submodule update --recursive
           export SQLCIPHER_LIB_DIR=/home/runner/work/jdragojevic/action-docs/libs/desktop/linux-x86-64/sqlcipher/lib
           export SQLCIPHER_INCLUDE_DIR=/home/runner/work/jdragojevic/action-docs/libs/desktop/linux-x86-64/sqlcipher/include
           export NSS_DIR=/home/runner/work/jdragojevic/action-docs/libs/desktop/linux-x86-64/nss

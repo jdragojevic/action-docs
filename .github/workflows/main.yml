@@ -30,9 +30,8 @@ jobs:
           git remote add origin https://github.com/mozilla/application-services.git
 
       - name: Install mdbook dependencies
-        run: |
-          if: steps.cargo-cache.outputs.cache-hit != 'true'
-          cargo install mdbook mdbook-mermaid mdbook-open-on-gh   
+        if: steps.cargo-cache.outputs.cache-hit != 'true'
+        run: cargo install mdbook mdbook-mermaid mdbook-open-on-gh   
       
       - name: Create Developer Docs
         run: |

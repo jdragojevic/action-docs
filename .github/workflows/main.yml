@@ -22,14 +22,6 @@ jobs:
           git pull origin SYNC-2121-steal-this-book
           ./tools/build-book.sh
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build/docs # The folder the action should deploy.
-
-
       - name: Build Dependencies and Generate Rust Docs
         run: |
           git submodule init
@@ -44,7 +36,6 @@ jobs:
           export NSS_DIR=/home/runner/work/jdragojevic/action-docs/libs/desktop/linux-x86-64/nss
           export NSS_STATIC=1
           bash ./libs/verify-desktop-environment.sh
-          ./tools/build-book.sh
           cargo doc --no-deps --document-private-items
           git log -n 1 --pretty=format:"%H" > target/doc/index.html
           mv -f target/doc build/docs/rust-docs

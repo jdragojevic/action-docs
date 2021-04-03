@@ -36,24 +36,17 @@ jobs:
           export SQLCIPHER_INCLUDE_DIR=/home/runner/work/action-docs/action-docs/libs/desktop/linux-x86-64/sqlcipher/include
           export NSS_DIR=/home/runner/work/action-docs/action-docs/libs/desktop/linux-x86-64/nss
           export NSS_STATIC=1
-          echo `uname -a` `env`
           git clone https://chromium.googlesource.com/external/gyp.git tools/gyp
           cd tools/gyp
           sudo python setup.py install
           cd ../..
           sudo apt-get install ninja-build zlib1g-dev tclsh python3.6
-          echo `pwd`
-          ls -ltr $PWD
-          echo `ls -ltr /home/runner/work/action-docs/action-docs/libs`
           ./libs/verify-desktop-environment.sh
           cargo doc --no-deps --document-private-items
           echo '<meta http-equiv=refresh content=0;url=rust-docs/index.html>' > target/doc/index.html
+          mkdir -p build/docs
           cp -rf target/doc/* build/docs/rust-docs
           
-
-
-
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:

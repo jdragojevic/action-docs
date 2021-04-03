@@ -20,8 +20,6 @@ jobs:
           git remote add origin https://github.com/mozilla/application-services.git
           cargo install mdbook mdbook-mermaid mdbook-open-on-gh
           git pull origin SYNC-2121-steal-this-book
-          git submodule init
-          git submodule update --recursive
           ./tools/build-book.sh
 
       - name: Deploy 🚀
@@ -32,8 +30,10 @@ jobs:
           FOLDER: build/docs # The folder the action should deploy.
 
 
-      - name: Build Rust and Generate Rust Docs
+      - name: Build Dependencies and Generate Rust Docs
         run: |
+          git submodule init
+          git submodule update --recursive
           git clone https://chromium.googlesource.com/external/gyp.git tools/gyp
           cd tools/gyp
           sudo python setup.py install

@@ -8,19 +8,18 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    name: Check
-    env: 
-      SQLCIPHER_LIB_DIR: ${{ env.GITHUB_WORKSPACE }}/libs/desktop/linux-x86-64/sqlcipher/lib
-      SQLCIPHER_INCLUDE_DIR: ${{ env.GITHUB_WORKSPACE }}/libs/desktop/linux-x86-64/sqlcipher/include
-      NSS_DIR: ${{ env.GITHUB_WORKSPACE }}/libs/desktop/linux-x86-64/nss
-      NSS_STATIC: 1      
+    name: Check     
     steps:
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
           toolchain: stable
           override: true
-
+        env: 
+          SQLCIPHER_LIB_DIR: ${{ github.workspace }}/libs/desktop/linux-x86-64/sqlcipher/lib
+          SQLCIPHER_INCLUDE_DIR: ${{ github.workspace }}/libs/desktop/linux-x86-64/sqlcipher/include
+          NSS_DIR: ${{ github.workspace }}/libs/desktop/linux-x86-64/nss
+          NSS_STATIC: 1 
       - name: Get a-s repository
         run: |
           git init .
@@ -28,6 +27,7 @@ jobs:
           git pull origin SYNC-2121-steal-this-book
           git submodule init
           git submodule update --recursive
+          
 
       # - name: Install mdbook dependencies
       #   run: cargo install mdbook mdbook-mermaid mdbook-open-on-gh   
@@ -38,11 +38,13 @@ jobs:
  
       - name: Build Dependencies and Generate Rust Docs
         run: |
+
           echo `env`
           # export SQLCIPHER_LIB_DIR=/home/runner/work/action-docs/action-docs/libs/desktop/linux-x86-64/sqlcipher/lib
           # export SQLCIPHER_INCLUDE_DIR=/home/runner/work/action-docs/action-docs/libs/desktop/linux-x86-64/sqlcipher/include
           # export NSS_DIR=/home/runner/work/action-docs/action-docs/libs/desktop/linux-x86-64/nss
           # export NSS_STATIC=1
+
           git clone https://chromium.googlesource.com/external/gyp.git tools/gyp
           cd tools/gyp
           sudo python setup.py install

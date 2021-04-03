@@ -1,1 +1,1 @@
-initSidebarItems({"constant":[["DEFAULT_FRECENCY_SETTINGS",""]],"enum":[["RedirectBonus",""]],"fn":[["calculate_frecency",""]],"struct":[["FrecencyComputation",""],["FrecencySettings",""]]});
+initSidebarItems({"constant":[["DEFAULT_FRECENCY_SETTINGS",""]],"fn":[["calculate_frecency",""]],"struct":[["FrecencySettings",""]]});

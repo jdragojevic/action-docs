@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["MetaRecord","Meta information are various push related values that need to persist across restarts. e.g. \"UAID\", server \"auth\" token, etc. This table should not be exposed outside of the push component."],["PushRecord",""]],"type":[["ChannelID",""]]});

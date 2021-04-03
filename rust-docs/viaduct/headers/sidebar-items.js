@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["is_valid_header_value",""],["trim_string",""]],"mod":[["consts",""],["name",""]],"struct":[["Header","A single header. Headers have a name (case insensitive) and a value. The character set for header and values are both restrictive."],["Headers","A list of headers."]]});

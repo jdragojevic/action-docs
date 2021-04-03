@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["create_engine",""],["get_forked_record","Returns a with the given local record's data but with a new guid and fresh sync metadata."]],"mod":[["incoming",""],["outgoing",""]],"struct":[["AddressPayload",""],["AddressesEngineStorageImpl",""],["PayloadEntry",""]]});
+initSidebarItems({"fn":[["create_engine",""]],"mod":[["incoming",""],["outgoing",""]]});

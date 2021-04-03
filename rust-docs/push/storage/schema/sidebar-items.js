@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["COMMON_COLS",""],["CREATE_TABLE_PUSH_SQL",""],["VERSION",""]],"fn":[["create",""],["init",""],["upgrade",""]]});

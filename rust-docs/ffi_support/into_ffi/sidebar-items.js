@@ -1,1 +1,0 @@
-initSidebarItems({"trait":[["IntoFfi","This trait is used to return types over the FFI. It essentially is a mapping between a type and version of that type we can pass back to C (`IntoFfi::Value`)."]]});

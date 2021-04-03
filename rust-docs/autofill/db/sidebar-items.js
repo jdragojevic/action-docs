@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["define_functions",""],["init_sql_connection",""],["normalize_path",""],["unurl_path",""]],"mod":[["addresses",""],["credit_cards",""],["models",""],["schema",""],["sql_fns",""],["store",""]],"struct":[["AutofillDb",""]]});
+initSidebarItems({"mod":[["addresses",""],["credit_cards",""],["models",""],["schema",""],["store",""]],"struct":[["AutofillDb",""]]});

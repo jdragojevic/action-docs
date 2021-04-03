@@ -1,1 +1,1 @@
-initSidebarItems({"constant":[["HISTORY_TTL",""],["MAX_INCOMING_PLACES",""],["MAX_OUTGOING_PLACES",""],["MAX_VISITS",""]],"mod":[["engine",""],["plan",""],["record",""]],"struct":[["ServerVisitTimestamp","Visit timestamps on the server are microseconds since the epoch."]]});
+initSidebarItems({"constant":[["HISTORY_TTL",""]],"mod":[["engine",""],["record",""]],"struct":[["ServerVisitTimestamp","Visit timestamps on the server are microseconds since the epoch."]]});

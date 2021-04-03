@@ -1,3 +1,0 @@
-(function() {var implementors = {};
-implementors["places"] = [{"text":"impl Driver for <a class=\"struct\" href=\"places/bookmark_sync/engine/struct.Driver.html\" title=\"struct places::bookmark_sync::engine::Driver\">Driver</a>","synthetic":false,"types":["places::bookmark_sync::engine::Driver"]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

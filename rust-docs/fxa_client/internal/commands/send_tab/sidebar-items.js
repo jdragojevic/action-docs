@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["COMMAND_NAME",""]],"enum":[["VersionnedPrivateSendTabKeys",""]],"fn":[["build_send_command",""],["extract_oldsync_key_components",""]],"struct":[["EncryptedSendTabPayload",""],["PrivateSendTabKeysV1",""],["PublicSendTabKeys",""],["SendTabKeysPayload",""],["SendTabPayload",""],["TabHistoryEntry",""]],"type":[["PrivateSendTabKeys",""]]});

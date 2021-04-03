@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["delete_meta",""],["get_meta",""],["put_meta",""]],"struct":[["STORE_FOR_MANAGER",""],["Store",""],["StoreImpl",""]]});
+initSidebarItems({"struct":[["STORE_FOR_MANAGER",""],["Store",""],["StoreImpl",""]]});

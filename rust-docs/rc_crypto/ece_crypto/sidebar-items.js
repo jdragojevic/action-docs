@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["init",""]],"struct":[["RcCryptoCryptographer",""],["RcCryptoLocalKeyPair",""],["RcCryptoRemotePublicKey",""]]});
+initSidebarItems({"struct":[["RcCryptoLocalKeyPair",""],["RcCryptoRemotePublicKey",""]]});

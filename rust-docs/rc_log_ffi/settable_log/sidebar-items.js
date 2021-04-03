@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["init_once",""],["set_logger",""],["unset_logger",""]],"struct":[["SETTABLE_LOG",""],["SettableLog",""]]});

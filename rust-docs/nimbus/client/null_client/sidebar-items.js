@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["NullClient","This is a client for use when no server is provided. Its primary use is for non-Mozilla forks of apps that are not using their own server infrastructure."]]});

@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["RemoteSettingsConfig","Optional custom configuration Currently includes the following:"]]});

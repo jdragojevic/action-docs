@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["synchronize",""],["synchronize_with_clients_engine",""]],"trait":[["SyncEngine","A \"sync engine\" is a thing that knows how to sync. It's often implemented by a \"store\" (which is the generic term responsible for all storage associated with a component, including storage required for sync.)"]],"type":[["IncomingChangeset",""]]});

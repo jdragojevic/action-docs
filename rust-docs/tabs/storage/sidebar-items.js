@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["TAB_ENTRIES_LIMIT",""],["URI_LENGTH_MAX",""]],"fn":[["is_url_syncable",""]],"struct":[["ClientRemoteTabs",""],["RemoteTab",""],["TabsStorage",""]]});

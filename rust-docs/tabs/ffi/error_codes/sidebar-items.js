@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["AUTH_INVALID","Indicates the FxA credentials are invalid, and should be refreshed."],["NETWORK","A request to the sync server failed."],["UNEXPECTED","An unexpected error occurred which likely cannot be meaningfully handled by the application."]]});

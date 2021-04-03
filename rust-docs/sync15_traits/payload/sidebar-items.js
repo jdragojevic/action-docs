@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["Payload","Represents the decrypted payload in a Bso. Provides a minimal layer of type safety to avoid double-encrypting."]]});

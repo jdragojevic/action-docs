@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["LinkingKind",""]],"fn":[["determine_kind",""],["env",""],["env_flag",""],["env_str",""],["get_nss",""],["get_nss_libs",""],["link_nss",""],["link_nss_libs",""]],"struct":[["NoNssDir",""]]});
+initSidebarItems({"enum":[["LinkingKind",""]],"fn":[["env",""],["env_flag",""],["env_str",""],["link_nss",""]],"struct":[["NoNssDir",""]]});

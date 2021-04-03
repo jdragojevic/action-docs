@@ -1,3 +1,0 @@
-(function() {var implementors = {};
-implementors["places"] = [{"text":"impl&lt;'a&gt; Store for <a class=\"struct\" href=\"places/bookmark_sync/engine/struct.Merger.html\" title=\"struct places::bookmark_sync::engine::Merger\">Merger</a>&lt;'a&gt;","synthetic":false,"types":["places::bookmark_sync::engine::Merger"]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

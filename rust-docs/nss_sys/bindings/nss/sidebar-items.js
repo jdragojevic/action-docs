@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["NSS_INIT_FORCEOPEN",""],["NSS_INIT_NOCERTDB",""],["NSS_INIT_NOMODDB",""],["NSS_INIT_OPTIMIZESPACE",""],["NSS_INIT_READONLY",""]],"fn":[["NSS_InitContext",""],["NSS_VersionCheck",""]],"type":[["NSSInitContext",""],["NSSInitParameters",""]]});

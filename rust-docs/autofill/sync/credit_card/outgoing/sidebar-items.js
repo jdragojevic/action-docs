@@ -1,1 +1,1 @@
-initSidebarItems({"constant":[["DATA_TABLE_NAME",""],["MIRROR_TABLE_NAME",""],["STAGING_TABLE_NAME",""]],"struct":[["OutgoingCreditCardsImpl",""]]});
+initSidebarItems({});

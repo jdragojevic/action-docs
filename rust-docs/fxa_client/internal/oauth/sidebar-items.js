@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["AUTH_CIRCUIT_BREAKER_CAPACITY",""],["AUTH_CIRCUIT_BREAKER_RENEWAL_RATE",""],["OAUTH_MIN_TIME_LEFT",""],["OAUTH_WEBCHANNEL_REDIRECT",""]],"mod":[["attached_clients",""]],"struct":[["AccessTokenInfo",""],["AuthCircuitBreaker",""],["OAuthFlow",""],["RefreshToken",""]]});

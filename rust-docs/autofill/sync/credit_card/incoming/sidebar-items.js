@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["IncomingCreditCardsImpl",""]]});
+initSidebarItems({});

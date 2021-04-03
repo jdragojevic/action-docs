@@ -1,1 +1,0 @@
-initSidebarItems({"mod":[["as_json",""]],"struct":[["BsoRecord",""],["EMPTY_ENCRYPTED_PAYLOAD_SIZE",""],["EncryptedPayload",""],["Payload","Represents the decrypted payload in a Bso. Provides a minimal layer of type safety to avoid double-encrypting."]],"type":[["CleartextBso",""],["EncryptedBso",""]]});

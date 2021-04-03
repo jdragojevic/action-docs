@@ -1,3 +1,0 @@
-(function() {var implementors = {};
-implementors["places"] = [{"text":"impl&lt;'a, I&gt; AbortSignal for <a class=\"struct\" href=\"places/bookmark_sync/engine/struct.MergeInterruptee.html\" title=\"struct places::bookmark_sync::engine::MergeInterruptee\">MergeInterruptee</a>&lt;'a, I&gt; <span class=\"where fmt-newline\">where<br>&nbsp;&nbsp;&nbsp;&nbsp;I: <a class=\"trait\" href=\"interrupt_support/trait.Interruptee.html\" title=\"trait interrupt_support::Interruptee\">Interruptee</a>,&nbsp;</span>","synthetic":false,"types":["places::bookmark_sync::engine::MergeInterruptee"]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

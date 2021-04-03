@@ -45,6 +45,8 @@ jobs:
           sudo python setup.py install
           cd ../..
           sudo apt-get install ninja-build zlib1g-dev tclsh python3.6
+          echo `pwd`
+          ls -la `$PWD`
           echo `ls -ltr /home/runner/work/action-docs/action-docs/libs`
           ./libs/verify-desktop-environment.sh
           cargo doc --no-deps --document-private-items

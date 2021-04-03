@@ -13,12 +13,29 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-            
-      - name: Create Dev Docs
+ 
+      - name: Cargo Cache
+        id: cargo-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Get a-s repository
         run: |
           git init .
           git remote add origin https://github.com/mozilla/application-services.git
-          cargo install mdbook mdbook-mermaid mdbook-open-on-gh
+
+       - name: Install mdbook dependencies
+        run: |
+          if: steps.cargo-cache.outputs.cache-hit != 'true'
+          cargo install mdbook mdbook-mermaid mdbook-open-on-gh   
+      
+      - name: Create Developer Docs
+        run: |
           git pull origin SYNC-2121-steal-this-book
           ./tools/build-book.sh
 
@@ -30,7 +47,7 @@ jobs:
           export SQLCIPHER_INCLUDE_DIR=/home/runner/work/jdragojevic/action-docs/libs/desktop/linux-x86-64/sqlcipher/include
           export NSS_DIR=/home/runner/work/jdragojevic/action-docs/libs/desktop/linux-x86-64/nss
           export NSS_STATIC=1
-          env 
+          echo `uname -a` `env`
           git clone https://chromium.googlesource.com/external/gyp.git tools/gyp
           cd tools/gyp
           sudo python setup.py install

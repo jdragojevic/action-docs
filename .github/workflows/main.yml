@@ -13,16 +13,6 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
- 
-      - name: Cargo Cache
-        id: cargo-cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Get a-s repository
         run: |
@@ -55,7 +45,6 @@ jobs:
           
 
       - name: Install mdbook dependencies
-        if: steps.cargo-cache.outputs.cache-hit != 'true'
         run: cargo install mdbook mdbook-mermaid mdbook-open-on-gh   
       
       - name: Create Developer Docs

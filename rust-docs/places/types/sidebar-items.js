@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["BookmarkType","Bookmark types."],["SyncStatus","Re SyncStatus - note that:"],["VisitTransition",""]],"mod":[["visit_transition_set",""]],"struct":[["InvalidVisitType",""],["VisitTransitionSerdeVisitor",""],["VisitTransitionSet",""]]});

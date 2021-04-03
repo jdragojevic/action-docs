@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ErrorKind",""],["ErrorResponse","This enum is to discriminate `StorageHttpError`, and not used as an error."]],"struct":[["Error",""],["ErrorData",""]],"type":[["Result",""]]});

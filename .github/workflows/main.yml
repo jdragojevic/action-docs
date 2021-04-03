@@ -28,6 +28,7 @@ jobs:
         run: |
           git init .
           git remote add origin https://github.com/mozilla/application-services.git
+          git pull origin SYNC-2121-steal-this-book
 
  
       - name: Build Dependencies and Generate Rust Docs
@@ -59,7 +60,6 @@ jobs:
       
       - name: Create Developer Docs
         run: |
-          git pull origin SYNC-2121-steal-this-book
           ./tools/build-book.sh
           mv -f target/doc build/docs/rust-docs
 

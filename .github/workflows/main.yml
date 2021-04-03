@@ -5,7 +5,7 @@ on:
     - cron: '0 1 * * *'
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     name: Check
     steps:
       - uses: actions-rs/toolchain@v1

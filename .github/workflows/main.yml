@@ -32,6 +32,7 @@ jobs:
  
       - name: Build Dependencies and Generate Rust Docs
         run: |
+          echo `pwd`
           git submodule init
           git submodule update --recursive
           export SQLCIPHER_LIB_DIR=/home/runner/work/jdragojevic/action-docs/libs/desktop/linux/sqlcipher/lib

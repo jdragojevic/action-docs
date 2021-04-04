@@ -45,7 +45,7 @@ jobs:
           sudo apt-get install ninja-build zlib1g-dev tclsh python3.6
           ./libs/verify-desktop-environment.sh
           cargo doc --no-deps
-          echo '<meta http-equiv=refresh content=0;url=rust-docs/index.html>' > target/doc/index.html
+          echo '<meta http-equiv=refresh content=0;url=fxa_client>' > target/doc/index.html
           mkdir -p build/docs/rust-docs
           cp -rf target/doc/* build/docs/rust-docs
           

@@ -56,6 +56,7 @@ jobs:
           git checkout --orphan gh-pages
           git --work-tree build/docs add --all
           git --work-tree build/docs commit -m 'Deploy Docs'
+          git config url."https://ssh:" + ${{ github.token }} + "@github.com/".insteadOf "ssh://git@github.com/"
           git push origin HEAD:gh-pages --force
           rm -r build/docs
           git checkout -f main 

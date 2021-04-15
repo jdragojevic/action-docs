@@ -8,15 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    name: Check     
-    steps:
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: stable
-          override: true
-
-      - name: Get a-s repository
+    name: Get repository and install Rust dependencies
         run: |
           echo `env`
           git init .
@@ -24,11 +16,10 @@ jobs:
           git pull origin main
           git submodule init
           git submodule update --recursive
-          
-      # - name: Generate developer docs with mdbook  
-      #   run: |
-      #     cargo install mdbook mdbook-mermaid mdbook-open-on-gh
-      #     ./tools/build-book.sh
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          source $HOME/.cargo/env
+          cargo install mdbook mdbook-mermaid mdbook-open-on-gh
+          ./tools/build-book.sh
  
       # - name: Build Dependencies and Generate Rust Docs
       #   env: 
@@ -51,14 +42,10 @@ jobs:
           
       - name: Deploy 🚀
         run: |
-          mkdir -p build/docs
-          echo '<!DOCTYPE html><html><head><title>Example</title></head><body><p>Hello.</p></body></html>' > build/docs/index.html
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
           git config --local url."https://ssh:${{ github.token }}@github.com/".insteadOf "ssh://git@github.com/"
-          git config --local url."https://api:${{ github.token }}@github.com/".insteadOf "https://github.com/"
           git config --local url."https://git:${{ github.token }}@github.com/".insteadOf "git@github.com:"
-          git config -l
           git checkout --orphan gh-pages
           git --work-tree build/docs add --all
           git --work-tree build/docs commit -m 'Deploy Docs'

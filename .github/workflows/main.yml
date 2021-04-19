@@ -2,9 +2,7 @@ name: Build and Deploy
 on:   
   push:
     branches:
-      - main
-  schedule:
-    - cron: '0 1 * * *'
+      - none
 jobs:
   build-and-deploy-docs:
     runs-on: ubuntu-latest
